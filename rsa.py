@@ -20,8 +20,8 @@ def crypt(message):
 
 start = time.time()
 
-randprime1 = randprime(100)
-randprime2 = randprime(100)
+randprime1 = randprime(400)
+randprime2 = randprime(400)
 tot = (randprime2 - 1) * (randprime1 - 1)
 n = randprime1 * randprime2
 
