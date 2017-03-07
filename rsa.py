@@ -39,13 +39,19 @@ class rsa_edu:
 				
 						
         def encrypt(self):
+				be = bin(self.encrypt)
+				sigma = 1
+				for x in range(len(be) - 2):
+						if be[-(x+1)] is '1':
+								sigma = sigma*(self.hi%self.n)
+						self.hi = (self.hi*self.hi)%self.n
                 self.crypt = (self.hi**self.e)%self.n
                 
         def decrypt(self):
                 bd = bin(self.decrypt_key)
                 sigma = 1
                 for x in range(len(bd)-2):
-                        if bd[len(bd) - (x+1)] is '1':
+                        if bd[-(x+1)] is '1':
                                 sigma = sigma * (self.crypt%self.n)
                         self.crypt = (self.crypt*self.crypt)%self.n
                 u = sigma%self.n
