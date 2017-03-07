@@ -27,9 +27,7 @@ def randprime(bits):
 			for w in range(s):
 				a = z
 				binp = bin((2**w)*n)
-				sig = 1	
-				if z > 10:
-					print float(z/pot)*100
+				sig = 1						
 				for x in range(len(binp)-2):
 					a = (a*a)%prime
 					if binp[len(binp) - (x+1)] is '1':
